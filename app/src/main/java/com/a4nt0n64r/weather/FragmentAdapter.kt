@@ -19,7 +19,6 @@ class FragmentAdapter : ListDelegationAdapter<List<Meteo>>() {
     }
 
     fun setData(items: List<Meteo>?) {
-        Log.v("Fragment", "setData()")
         this.items = items
         notifyDataSetChanged()
     }
@@ -44,12 +43,17 @@ private class ExtendedDelegate :
 
     override fun onBindViewHolder(item: Meteo, viewHolder: ViewHolder, payloads: List<Any>) {
         //TODO(изменить)
-        viewHolder.text.text = item.toString()
+        viewHolder.pressure.text = item.pressure()
+        viewHolder.timeOfDay.text = item.timeOfDay()
+        viewHolder.temp.text = item.temp
+
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //TODO(изменить)
-        val text: TextView = itemView.findViewById(R.id.list_item_tv)
+        val pressure: TextView = itemView.findViewById(R.id.pressure_view)
+        val timeOfDay: TextView = itemView.findViewById(R.id.tod)
+        val temp: TextView = itemView.findViewById(R.id.temp)
 
     }
 }

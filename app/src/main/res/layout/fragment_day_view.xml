@@ -3,15 +3,12 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".Fragments.ExtendedDayViewFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
+             tools:context=".Fragments.DayViewFragment">
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/recycler_in_fragment"
+            android:id="@+id/recycler_in_fragmentDay"
     />
 
 </FrameLayout>

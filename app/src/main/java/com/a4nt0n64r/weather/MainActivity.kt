@@ -13,14 +13,16 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        addFragment()
+        updateDayWeather()
+
     }
 
-    fun addFragment() {
+    fun updateDayWeather() {
         val frag = ExtendedDayViewFragment()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fl_fr, frag)
+            .replace(R.id.ext_fragment_place, frag)
             .commit()
+        val s = getString(R.string.morning)
     }
 
 

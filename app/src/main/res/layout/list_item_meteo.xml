@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:padding="8dp"
+        android:layout_margin="4dp"
 
+>
+
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="85dp" android:orientation="vertical">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tod"
+                android:layout_margin="8dp" android:textSize="30sp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pressure_view"
+                android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
     <TextView
-            android:text="TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/list_item_tv"/>
-</LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/temp" android:textSize="36sp"
+            android:layout_gravity="end" android:layout_margin="16dp"/>
+
+</androidx.cardview.widget.CardView>
